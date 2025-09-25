@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FAZA HADIYAN — GitHub Personal Branding</title>
+  <meta name="description" content="Personal GitHub homepage showcasing projects, skills and contact." />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#93a3bf; --accent:#7c5cff;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --max-width:1100px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; background:linear-gradient(180deg,#071028 0%, var(--bg) 100%); color:#e6eef8;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    .container{max-width:var(--max-width); margin:40px auto; padding:28px}
+
+    header{display:flex;align-items:center;gap:18px}
+    .avatar{width:92px;height:92px;border-radius:18px;overflow:hidden;flex:0 0 92px;border:2px solid rgba(255,255,255,0.06)}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    h1{margin:0;font-size:26px;letter-spacing:-0.5px}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:28px;margin-top:24px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:20px;border-radius:var(--radius);box-shadow:0 6px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+
+    .bio{line-height:1.55;color:#dbe8ff}
+    .tags{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
+    .tag{background:var(--glass);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted);}
+
+    .actions{margin-top:18px;display:flex;gap:10px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;border:0;background:linear-gradient(90deg,var(--accent),#4fb3ff);color:white;text-decoration:none;font-weight:600}
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);font-weight:600}
+
+    .meta{font-size:13px;color:var(--muted);display:flex;gap:12px;align-items:center;margin-top:12px}
+
+    .repos{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .repo{padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));border:1px solid rgba(255,255,255,0.03)}
+    .repo h3{margin:0;font-size:15px}
+    .repo p{margin:6px 0 0;color:var(--muted);font-size:13px}
+    .repo .repo-meta{margin-top:10px;display:flex;gap:12px;align-items:center;color:var(--muted);font-size:13px}
+
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* responsive */
+    @media (max-width:920px){
+      .hero{grid-template-columns:1fr;}
+      .repos{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar"><img id="avatar" src="" alt="avatar"></div>
+      <div>
+        <h1 id="name">Faza Hadiyan</h1>
+        <div class="meta"><span id="role">Data Analyst - Data enthusiast</span><span>•</span><span id="location">Jakarta, ID</span></div>
+        <p class="lead" id="short-bio">I build things on the web and love open-source. Welcome to my GitHub personal homepage.</p>
+      </div>
+    </header>
+
+    <main class="hero">
+      <section class="card">
+        <h2>About me</h2>
+        <p class="bio" id="about">I'm trying my best learning about github and how will it support my career.</p>
+
+        <div class="tags" id="skills">
+          <div class="tag">JavaScript</div>
+          <div class="tag">React</div>
+          <div class="tag">Python</div>
+          <div class="tag">DevOps</div>
+        </div>
+
+        <div class="actions">
+          <a id="github-btn" class="btn" href="#" target="_blank">View on GitHub</a>
+          <a id="resume-btn" class="btn secondary" href="#">Download CV</a>
+        </div>
+
+        <h3 style="margin-top:20px">Pinned projects</h3>
+        <div id="pinned" class="repos" aria-live="polite">
+          <!-- repos populated by JS -->
+        </div>
+      </section>
+
+      <aside class="card">
+        <h3>Contact</h3>
+        <p style="margin:6px 0 14px;color:var(--muted)">Want to collaborate or hire me? Send a message.</p>
+        <p><strong>Email</strong><br><a id="email-link" href="mailto:you@example.com">fazah@xlsmart.co.id</a></p>
+        <p style="margin-top:10px"><strong>Social</strong></p>
+        <p class="meta" style="flex-direction:column;align-items:flex-start">
+          <a id="twitter-link" href="#" target="_blank">Twitter</a>
+          <a id="linkedin-link" href="#" target="_blank">LinkedIn</a>
+          <a id="mastodon-link" href="#" target="_blank">Mastodon</a>
+        </p>
+
+        <hr style="margin:18px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)">
+
+        <h4>Skills</h4>
+        <div class="tags" style="margin-top:8px">
+          <div class="tag">APIs</div>
+          <div class="tag">CI/CD</div>
+          <div class="tag">Testing</div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div id="footer-line">Made with Help from AI • <a id="github-link-footer" href="#" target="_blank">GitHub</a></div>
+    </footer>
+  </div>
+
+  <script>
+    // -------------- CONFIG: change these to personalize --------------
+    const USERNAME = 'your-github-username'; // <-- set your GitHub username here
+    const SHOW_REPO_COUNT = 6; // how many repos to show
+    const FALLBACK_REPOS = [
+      {name:'project-one', html_url:'#', description:'A cool project.'},
+      {name:'project-two', html_url:'#', description:'Another project.'}
+    ];
+    // -----------------------------------------------------------------
+
+    async function fetchGitHub() {
+      const headers = { Accept: 'application/vnd.github.v3+json' };
+      try {
+        const [profileRes, reposRes] = await Promise.all([
+          fetch(`https://api.github.com/users/${USERNAME}`, {headers}),
+          fetch(`https://api.github.com/users/${USERNAME}/repos?per_page=100&sort=pushed`, {headers})
+        ]);
+        if(!profileRes.ok || !reposRes.ok) throw new Error('GitHub API error');
+
+        const profile = await profileRes.json();
+        const repos = await reposRes.json();
+
+        applyProfile(profile);
+        showRepos(repos.slice(0, SHOW_REPO_COUNT));
+      } catch (err) {
+        console.warn('Could not fetch GitHub data:', err.message);
+        // fallback content
+        document.getElementById('avatar').src = `https://avatars.githubusercontent.com/${USERNAME}?s=200`;
+        document.getElementById('name').textContent = 'Your Name';
+        document.getElementById('github-btn').href = `https://github.com/${USERNAME}`;
+        showRepos(FALLBACK_REPOS);
+      }
+    }
+
+    function applyProfile(profile) {
+      document.getElementById('avatar').src = profile.avatar_url || '';
+      document.getElementById('name').textContent = profile.name || profile.login || 'Your Name';
+      document.getElementById('short-bio').textContent = profile.bio || 'Open-source developer.';
+      document.getElementById('role').textContent = (profile.company || 'Developer') + ' • ' + (profile.login);
+      document.getElementById('location').textContent = profile.location || '';
+      document.getElementById('github-btn').href = profile.html_url;
+      document.getElementById('github-link-footer').href = profile.html_url;
+    }
+
+    function showRepos(repos) {
+      const container = document.getElementById('pinned');
+      container.innerHTML = '';
+      if(!repos || repos.length === 0) {
+        container.innerHTML = '<p style="color:var(--muted)">No public repos found.</p>';
+        return;
+      }
+      repos.forEach(r => {
+        const card = document.createElement('article');
+        card.className = 'repo';
+        card.innerHTML = `
+          <h3><a href="${r.html_url}" target="_blank" style="color:inherit;text-decoration:none">${r.name}</a></h3>
+          <p>${r.description || ''}</p>
+          <div class="repo-meta">
+            <span>⭐ ${r.stargazers_count ?? 0}</span>
+            <span>•</span>
+            <span>Updated ${r.updated_at ? new Date(r.updated_at).toLocaleDateString() : ''}</span>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    // initialize
+    (function(){
+      if (USERNAME === 'jahefaza') {
+        // If user didn't update the config variable, show placeholders
+        document.getElementById('avatar').src = 'https://via.placeholder.com/200x200?text=Avatar';
+        document.getElementById('github-btn').href = '#';
+        showRepos(FALLBACK_REPOS);
+      } else {
+        fetchGitHub();
+      }
+    })();
+  </script>
+</body>
+</html>
